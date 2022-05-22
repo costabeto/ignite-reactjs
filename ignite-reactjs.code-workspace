@@ -4,10 +4,7 @@
 			"path": "01-github-explorer"
 		},
 		{
-			"path": "../challenges"
-		},
-		{
-			"path": "dtmoney"
+			"path": "02-dtmoney"
 		}
 	],
 	"settings": {}
