@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "02-dtmoney"
+		},
+		{
+			"path": "ignite-template-componentizando-a-aplicacao"
 		}
 	],
 	"settings": {}

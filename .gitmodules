@@ -1,0 +1,6 @@
+[submodule "ignite-template-componentizando-a-aplicacao"]
+	path = ignite-template-componentizando-a-aplicacao
+	url = git@github.com:costabeto/ignite-template-componentizando-a-aplicacao.git
+[submodule "ignite-template-reactjs-conceitos-do-react"]
+	path = ignite-template-reactjs-conceitos-do-react
+	url = git@github.com:costabeto/ignite-template-reactjs-conceitos-do-react.git
