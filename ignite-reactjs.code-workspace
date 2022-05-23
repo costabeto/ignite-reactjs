@@ -1,13 +1,28 @@
 {
 	"folders": [
 		{
+			"name": "01-github-explorer",
 			"path": "01-github-explorer"
 		},
 		{
+			"name": "02-dtmoney",
 			"path": "02-dtmoney"
 		},
 		{
+			"name": "03-ignews",
+			"path": "03-ignews"
+		},
+		{
+			"name": "ignite-template-reactjs-criando-um-hook-de-carrinho-de-compras",
+			"path": "ignite-template-reactjs-criando-um-hook-de-carrinho-de-compras"
+		},
+		{
+			"name": "ignite-template-componentizando-a-aplicacao",
 			"path": "ignite-template-componentizando-a-aplicacao"
+		},
+		{
+			"name": "ignite-template-reactjs-conceitos-do-react",
+			"path": "ignite-template-reactjs-conceitos-do-react"
 		}
 	],
 	"settings": {}

@@ -4,3 +4,6 @@
 [submodule "ignite-template-reactjs-conceitos-do-react"]
 	path = ignite-template-reactjs-conceitos-do-react
 	url = git@github.com:costabeto/ignite-template-reactjs-conceitos-do-react.git
+[submodule "ignite-template-reactjs-criando-um-hook-de-carrinho-de-compras"]
+	path = ignite-template-reactjs-criando-um-hook-de-carrinho-de-compras
+	url = git@github.com:costabeto/ignite-template-reactjs-criando-um-hook-de-carrinho-de-compras.git
