@@ -12,7 +12,7 @@ interface IHomeProps {
 	};
 }
 
-export default function Home({ product: { price_id, amount } }: IHomeProps) {
+export default function Home({ product: { amount } }: IHomeProps) {
 	return (
 		<>
 			<Head>
