@@ -23,6 +23,9 @@
 		{
 			"name": "ignite-template-reactjs-conceitos-do-react",
 			"path": "ignite-template-reactjs-conceitos-do-react"
+		},
+		{
+			"path": "04-dashgo"
 		}
 	],
 	"settings": {}
