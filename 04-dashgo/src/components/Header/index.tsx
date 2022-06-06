@@ -1,17 +1,19 @@
-import { Avatar, Box, Flex, HStack, Icon, Input, Text } from '@chakra-ui/react';
-import { ChangeEvent, useState } from 'react';
-import {
-  RiNotificationLine,
-  RiSearchLine,
-  RiUserAddLine,
-} from 'react-icons/ri';
+import { Flex, Icon, IconButton, useBreakpointValue } from '@chakra-ui/react';
+import { RiMenuLine } from 'react-icons/ri';
+import { useSidebarDrawer } from '../../hooks/useSidebarDrawer';
+import { Logo } from './Logo';
+import { NotificationsNav } from './NotificationsNav';
+import { Profile } from './Profile';
+import { SearchBox } from './SearchBox';
 
 export function Header() {
-  const [search, setSearch] = useState<string>('');
+  const { onOpen } = useSidebarDrawer();
 
-  function handleChangeSearchBox(event: ChangeEvent<HTMLInputElement>) {
-    setSearch(event.target.value);
-  }
+  const isWideVersion = useBreakpointValue<boolean>({
+    base: false,
+    lg: true,
+  });
+
   return (
     <Flex
       as='header'
@@ -20,74 +22,27 @@ export function Header() {
       h='20'
       mx='auto'
       mt='4'
-      px='6'
       align='center'
+      px='6'
     >
-      <Text fontSize='3xl' fontWeight='bold' letterSpacing='tight' w='64'>
-        dashgo
-        <Text as='span' ml='1' color='pink.500'>
-          .
-        </Text>
-      </Text>
-
-      <Flex
-        as='label'
-        flex='1'
-        py='4'
-        px='8'
-        ml='6'
-        maxW={400}
-        alignSelf='center'
-        color='gray.200'
-        position='relative'
-        bg='gray.800'
-        borderRadius='full'
-      >
-        <Input
-          color='gray.50'
+      {!isWideVersion && (
+        <IconButton
+          icon={<Icon as={RiMenuLine} />}
           variant='unstyled'
-          px='4'
-          mr='4'
-          placeholder='Buscar na plataforma'
-          _placeholder={{
-            color: 'gray.400',
-          }}
-          value={search}
-          onChange={handleChangeSearchBox}
+          onClick={onOpen}
+          fontSize={24}
+          mr={2}
+          aria-label='Open navigation'
         />
+      )}
+      <Logo />
 
-        <Icon as={RiSearchLine} fontSize='20' />
-      </Flex>
+      {isWideVersion && <SearchBox />}
 
       <Flex align='center' ml='auto'>
-        <HStack
-          spacing={['6', '8']}
-          mx={['6', '8']}
-          pr={['6', '8']}
-          py='1'
-          color='gray.300'
-          borderRightWidth={1}
-          borderColor='gray.700'
-        >
-          <Icon as={RiNotificationLine} fontSize={20} />
-          <Icon as={RiUserAddLine} fontSize={20} />
-        </HStack>
+        <NotificationsNav />
 
-        <Flex align='center'>
-          <Box mr='4' textAlign='right'>
-            <Text>Roberto Costa</Text>
-
-            <Text color='gray.300' fontSize='sm'>
-              roberto.araujo339@gmail.com
-            </Text>
-          </Box>
-
-          <Avatar
-            size='md'
-            name='Roberto Costa'
-            src='https://github.com/costabeto.png'
-          />
-        </Flex>
+        <Profile showProfileData={isWideVersion} />
       </Flex>
     </Flex>
   );

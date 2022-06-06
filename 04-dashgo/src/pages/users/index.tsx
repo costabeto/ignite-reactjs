@@ -13,11 +13,12 @@ import {
   Thead,
   Tr,
 } from '@chakra-ui/react';
+import Link from 'next/link';
 import React from 'react';
 import { RiAddLine, RiPencilLine } from 'react-icons/ri';
 import { Header } from '../../components/Header';
 import { Pagination } from '../../components/Pagination';
-import Sidebar from '../../components/Sidebar';
+import { Sidebar } from '../../components/Sidebar';
 
 const UserList = () => {
   return (
@@ -33,17 +34,19 @@ const UserList = () => {
               Usuários
             </Heading>
 
-            <Button
-              as='a'
-              size='sm'
-              fontSize='sm'
-              colorScheme='pink'
-              ml='4'
-              leftIcon={<Icon as={RiAddLine} fontSize={21} />}
-              cursor='pointer'
-            >
-              Criar novo usuário
-            </Button>
+            <Link href='/users/create' passHref>
+              <Button
+                as='a'
+                size='sm'
+                fontSize='sm'
+                colorScheme='pink'
+                ml='4'
+                leftIcon={<Icon as={RiAddLine} fontSize={21} />}
+                cursor='pointer'
+              >
+                Criar novo usuário
+              </Button>
+            </Link>
           </Flex>
 
           <Table>
@@ -87,6 +90,11 @@ const UserList = () => {
               </Tr>
             </Tbody>
           </Table>
+
+          <Pagination
+            totalCountOfRegisters={150}
+            onPageChange={() => console.log('test')}
+          />
         </Box>
       </Flex>
     </Box>
