@@ -26,6 +26,9 @@
 		},
 		{
 			"path": "04-dashgo"
+		},
+		{
+			"path": "next-auth"
 		}
 	],
 	"settings": {}
