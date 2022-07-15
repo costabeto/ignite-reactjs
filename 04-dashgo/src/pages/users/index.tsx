@@ -100,12 +100,14 @@ const UserList = () => {
             <>
               <Table colorScheme='whiteAlpha'>
                 <Thead>
-                  <Th px={['4', '4', '6']} color='gray.300' w='8'>
-                    <Checkbox colorScheme='pink' />
-                  </Th>
-                  <Th>Usuário</Th>
-                  {isWideVersion && <Th>Data de cadastro</Th>}
-                  <Th w={0}></Th>
+                  <Tr>
+                    <Th px={['4', '4', '6']} color='gray.300' w='8'>
+                      <Checkbox colorScheme='pink' />
+                    </Th>
+                    <Th>Usuário</Th>
+                    {isWideVersion && <Th>Data de cadastro</Th>}
+                    <Td w={0}></Td>
+                  </Tr>
                 </Thead>
 
                 <Tbody>
